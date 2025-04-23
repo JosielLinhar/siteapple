@@ -1,24 +1,93 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './fonts.css';
+import { Header, ItemHeader, TextHeader } from './AppStyled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faApple } from '@fortawesome/free-brands-svg-icons';
+import {
+  faMagnifyingGlass,
+  faBagShopping,
+} from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        <ItemHeader>
+          <FontAwesomeIcon
+            style={{
+              color: '#f5f5f7',
+              fontSize: '13px',
+              opacity: '0.8',
+              cursor: 'pointer',
+            }}
+            icon={faApple}
+          />
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>Loja</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>Mac</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>iPad</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>iPhone</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>Watch</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>AirPods</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>TV e Casa</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>Só na Apple</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>Acessórios</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <TextHeader>Suporte</TextHeader>
+        </ItemHeader>
+
+        <ItemHeader>
+          <FontAwesomeIcon
+            style={{
+              color: '#f5f5f7',
+              fontSize: '13px',
+              opacity: '0.8',
+              cursor: 'pointer',
+            }}
+            icon={faMagnifyingGlass}
+          />
+        </ItemHeader>
+
+        <ItemHeader>
+          <FontAwesomeIcon
+            style={{
+              color: '#f5f5f7',
+              fontSize: '13px',
+              opacity: '0.8',
+              cursor: 'pointer',
+            }}
+            icon={faBagShopping}
+          />
+        </ItemHeader>
+      </Header>
     </div>
   );
 }
