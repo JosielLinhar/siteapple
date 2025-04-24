@@ -1,12 +1,33 @@
 import React from 'react';
 import './fonts.css';
-import { Header, ItemHeader, TextHeader } from './AppStyled';
+import {
+  Header,
+  ItemHeader,
+  TextHeader,
+  OptionsProductsApple,
+  ItemOptionProductApple,
+  ImageOptionProductApple,
+  TextOptionProductApple,
+  SpanNewOptionProductApple,
+} from './AppStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
 import {
   faMagnifyingGlass,
   faBagShopping,
 } from '@fortawesome/free-solid-svg-icons';
+
+import iMac from './assets/images/iMac.svg';
+import macAcessories from './assets/images/macAcessories.svg';
+import macbookAir from './assets/images/macbookAir.svg';
+import macbookPro from './assets/images/macbookPro.svg';
+import macCompare from './assets/images/macCompare.svg';
+import macDisplays from './assets/images/macDisplays.svg';
+import macMini from './assets/images/macMini.svg';
+import macOs from './assets/images/macOs.svg';
+import macPro from './assets/images/macPro.svg';
+import macShop from './assets/images/macShop.svg';
+import macStudio from './assets/images/macStudio.svg';
 
 function App() {
   return (
@@ -88,6 +109,97 @@ function App() {
           />
         </ItemHeader>
       </Header>
+
+      <OptionsProductsApple>
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macbookAir}
+            widthImage="88px"
+            alt="macbook-air"
+          />
+          <TextOptionProductApple>MacBook Air</TextOptionProductApple>
+          <SpanNewOptionProductApple>Novo</SpanNewOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macbookPro}
+            widthImage="88px"
+            alt="macbook-pro"
+          />
+          <TextOptionProductApple>MacBook Pro</TextOptionProductApple>
+          <SpanNewOptionProductApple>Novo</SpanNewOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple src={iMac} widthImage="45px" alt="iMac" />
+          <TextOptionProductApple>iMac de 24 pol.</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macMini}
+            widthImage="30px"
+            alt="mac-mini"
+          />
+          <TextOptionProductApple>Mac mini</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macStudio}
+            widthImage="30px"
+            alt="mac-studio"
+          />
+          <TextOptionProductApple>Mac Studio</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple src={macPro} alt="mac-pro" />
+          <TextOptionProductApple>Mac Pro</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macCompare}
+            widthImage="50px"
+            alt="mac-compare"
+          />
+          <TextOptionProductApple>Comparar</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macDisplays}
+            widthImage="83px"
+            alt="mac-displays"
+          />
+          <TextOptionProductApple>Monitores</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macAcessories}
+            widthImage="38px"
+            alt="mac-acessories"
+          />
+          <TextOptionProductApple>Acessórios</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple src={macOs} widthImage="41px" alt="macOs" />
+          <TextOptionProductApple>Monterey</TextOptionProductApple>
+        </ItemOptionProductApple>
+
+        <ItemOptionProductApple>
+          <ImageOptionProductApple
+            src={macShop}
+            widthImage="120px"
+            alt="mac-shop"
+          />
+          <TextOptionProductApple>Comprar Mac</TextOptionProductApple>
+        </ItemOptionProductApple>
+      </OptionsProductsApple>
     </div>
   );
 }
