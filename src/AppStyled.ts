@@ -70,3 +70,29 @@ export const SpanNewOptionProductApple = styled.span`
   position: absolute;
   margin-top: 76px;
 `;
+
+export const AppleEducationBlock = styled.div`
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f7;
+  margin-top: 20px;
+  letter-spacing: -0.016em;
+
+  p {
+    font-family: 'MyriadProRegular';
+    font-size: 14px;
+    font-weight: 400;
+
+    a {
+      color: #06c;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+`;

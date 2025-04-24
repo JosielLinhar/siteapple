@@ -9,12 +9,14 @@ import {
   ImageOptionProductApple,
   TextOptionProductApple,
   SpanNewOptionProductApple,
+  AppleEducationBlock,
 } from './AppStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
 import {
   faMagnifyingGlass,
   faBagShopping,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 import iMac from './assets/images/iMac.svg';
@@ -200,6 +202,20 @@ function App() {
           <TextOptionProductApple>Comprar Mac</TextOptionProductApple>
         </ItemOptionProductApple>
       </OptionsProductsApple>
+
+      <AppleEducationBlock>
+        <p>
+          Economize na compra do MacBook Pro de 13 polegadas na Apple Store
+          Educacional*.{' '}
+          <a href="https://apple.com.br">
+            Comprar{' '}
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{ fontSize: '10px' }}
+            />
+          </a>
+        </p>
+      </AppleEducationBlock>
     </div>
   );
 }
