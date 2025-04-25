@@ -10,6 +10,9 @@ import {
   TextOptionProductApple,
   SpanNewOptionProductApple,
   AppleEducationBlock,
+  BannerArea,
+  PurchaseButton,
+  BannerAreaButtons,
 } from './AppStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
@@ -30,6 +33,7 @@ import macOs from './assets/images/macOs.svg';
 import macPro from './assets/images/macPro.svg';
 import macShop from './assets/images/macShop.svg';
 import macStudio from './assets/images/macStudio.svg';
+import macbook from './assets/images/macbook.jpeg';
 
 function App() {
   return (
@@ -120,7 +124,9 @@ function App() {
             alt="macbook-air"
           />
           <TextOptionProductApple>MacBook Air</TextOptionProductApple>
-          <SpanNewOptionProductApple>Novo</SpanNewOptionProductApple>
+          <SpanNewOptionProductApple type="span-new-option">
+            Novo
+          </SpanNewOptionProductApple>
         </ItemOptionProductApple>
 
         <ItemOptionProductApple>
@@ -130,7 +136,9 @@ function App() {
             alt="macbook-pro"
           />
           <TextOptionProductApple>MacBook Pro</TextOptionProductApple>
-          <SpanNewOptionProductApple>Novo</SpanNewOptionProductApple>
+          <SpanNewOptionProductApple type="span-new-option">
+            Novo
+          </SpanNewOptionProductApple>
         </ItemOptionProductApple>
 
         <ItemOptionProductApple>
@@ -216,6 +224,38 @@ function App() {
           </a>
         </p>
       </AppleEducationBlock>
+
+      <BannerArea>
+        <SpanNewOptionProductApple>Novo</SpanNewOptionProductApple>
+        <h1>MacBook Air</h1>
+        <h2>Livre, leve e voa.</h2>
+        <p>A partir de R$ 13.999</p>
+
+        <BannerAreaButtons>
+          <PurchaseButton bgColor="#0071e3" color="white">
+            Comprar
+          </PurchaseButton>
+
+          <PurchaseButton
+            bgColor="transparent"
+            underline={true}
+            color="#0071e3"
+          >
+            Saiba mais{' '}
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{ fontSize: '11px', marginLeft: '5px' }}
+            />
+          </PurchaseButton>
+        </BannerAreaButtons>
+
+        <ImageOptionProductApple
+          src={macbook}
+          widthImage="450px"
+          marginTop="75px"
+          alt="Macbook"
+        />
+      </BannerArea>
     </div>
   );
 }
