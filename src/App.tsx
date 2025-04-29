@@ -13,6 +13,7 @@ import {
   BannerArea,
   PurchaseButton,
   BannerAreaButtons,
+  BannerMacPro,
 } from './AppStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
@@ -34,6 +35,7 @@ import macPro from './assets/images/macPro.svg';
 import macShop from './assets/images/macShop.svg';
 import macStudio from './assets/images/macStudio.svg';
 import macbook from './assets/images/macbook.jpeg';
+import macpro from './assets/images/macpro.jpeg';
 
 function App() {
   return (
@@ -124,7 +126,7 @@ function App() {
             alt="macbook-air"
           />
           <TextOptionProductApple>MacBook Air</TextOptionProductApple>
-          <SpanNewOptionProductApple type="span-new-option">
+          <SpanNewOptionProductApple marginTop="76px" type="span-new-option">
             Novo
           </SpanNewOptionProductApple>
         </ItemOptionProductApple>
@@ -136,7 +138,7 @@ function App() {
             alt="macbook-pro"
           />
           <TextOptionProductApple>MacBook Pro</TextOptionProductApple>
-          <SpanNewOptionProductApple type="span-new-option">
+          <SpanNewOptionProductApple marginTop="76px" type="span-new-option">
             Novo
           </SpanNewOptionProductApple>
         </ItemOptionProductApple>
@@ -253,9 +255,43 @@ function App() {
           src={macbook}
           widthImage="450px"
           marginTop="75px"
-          alt="Macbook"
+          alt="Macbook Air"
         />
       </BannerArea>
+
+      <BannerMacPro>
+        <SpanNewOptionProductApple marginTop="45px">
+          Novo
+        </SpanNewOptionProductApple>
+        <h1>MacBook Pro de 13 pol.</h1>
+        <h2>Pro em qualquer lugar.</h2>
+        <p>A partir de R$ 15.299</p>
+
+        <BannerAreaButtons>
+          <PurchaseButton bgColor="#0071e3" color="white">
+            Comprar
+          </PurchaseButton>
+
+          <PurchaseButton
+            bgColor="transparent"
+            underline={true}
+            color="#0071e3"
+          >
+            Saiba mais{' '}
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{ fontSize: '11px', marginLeft: '5px' }}
+            />
+          </PurchaseButton>
+        </BannerAreaButtons>
+
+        <ImageOptionProductApple
+          src={macpro}
+          widthImage="900px"
+          marginTop="15px"
+          alt="Macbook Pro"
+        />
+      </BannerMacPro>
     </div>
   );
 }

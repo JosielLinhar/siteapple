@@ -6,6 +6,7 @@ interface ImageOptionProductAppleType {
 }
 
 interface SpanNewOptionProductAppleType {
+  marginTop?: string;
   type?: string;
 }
 
@@ -82,7 +83,7 @@ export const SpanNewOptionProductApple = styled.span<SpanNewOptionProductAppleTy
     props.type === 'span-new-option' ? '400' : 'bold'};
   position: ${(props) =>
     props.type === 'span-new-option' ? 'absolute' : 'relative'};
-  margin-top: ${(props) => (props.type === 'span-new-option' ? '76px' : '0px')};
+  margin-top: ${(props) => props.marginTop};
 `;
 
 export const AppleEducationBlock = styled.div`
@@ -168,4 +169,37 @@ export const BannerAreaButtons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+`;
+
+export const BannerMacPro = styled.div`
+  height: 615px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 54px 0;
+
+  h1 {
+    font-family: 'MyriadProRegular';
+    font-size: 56px;
+    color: white;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: white;
+    font-family: 'MyriadProRegular';
+    font-weight: bold;
+    margin-top: -30px;
+  }
+
+  p {
+    font-size: 17px;
+    color: white;
+    font-family: 'MyriadProLight';
+    font-weight: 600;
+    margin-top: -2px;
+  }
 `;
