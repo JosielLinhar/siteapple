@@ -16,6 +16,12 @@ interface PurchaseButtonType {
   underline?: boolean;
 }
 
+interface OptionTypeInterface {
+  selected: boolean;
+  width: string;
+  right?: boolean;
+}
+
 export const Header = styled.div`
   height: 48px;
   max-height: 44px;
@@ -202,4 +208,43 @@ export const BannerMacPro = styled.div`
     font-weight: 600;
     margin-top: -2px;
   }
+`;
+
+export const SelectMac = styled.div`
+  padding: 100px 30px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: 'MyriadProRegular';
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+`;
+
+export const OptionsMac = styled.div`
+  height: 40px;
+  width: 210px;
+  border-bottom: 1px solid #d2d2d7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
+export const OptionType = styled.div<OptionTypeInterface>`
+  color: ${(props) => (props.selected ? '#1d1d1f' : '#6e6e73')};
+  font-family: 'MyriadProRegular';
+  font-size: 17px;
+  width: ${(props) => props.width};
+  height: 100%;
+  border-bottom: 1px solid
+    ${(props) => (props.selected ? '#1d1d1f' : '#d2d2d7')};
+  cursor: pointer;
+  text-align: ${(props) => (props.right ? 'right' : 'left')};
 `;
