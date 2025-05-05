@@ -6,6 +6,7 @@ interface ImageOptionProductAppleType {
 }
 
 interface SpanNewOptionProductAppleType {
+  fontSize: string;
   marginTop?: string;
   type?: string;
 }
@@ -20,6 +21,10 @@ interface OptionTypeInterface {
   selected: boolean;
   width: string;
   right?: boolean;
+}
+
+interface ColorOptionMacType {
+  background: string;
 }
 
 export const Header = styled.div`
@@ -84,7 +89,7 @@ export const TextOptionProductApple = styled.a`
 export const SpanNewOptionProductApple = styled.span<SpanNewOptionProductAppleType>`
   font-family: 'MyriadProRegular';
   color: #f56300;
-  font-size: ${(props) => (props.type === 'span-new-option' ? '10px' : '17px')};
+  font-size: ${(props) => props.fontSize};
   font-weight: ${(props) =>
     props.type === 'span-new-option' ? '400' : 'bold'};
   position: ${(props) =>
@@ -227,7 +232,7 @@ export const SelectMac = styled.div`
   }
 `;
 
-export const OptionsMac = styled.div`
+export const OptionsType = styled.div`
   height: 40px;
   width: 210px;
   border-bottom: 1px solid #d2d2d7;
@@ -235,6 +240,7 @@ export const OptionsMac = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  gap: 20px;
 `;
 
 export const OptionType = styled.div<OptionTypeInterface>`
@@ -247,4 +253,51 @@ export const OptionType = styled.div<OptionTypeInterface>`
     ${(props) => (props.selected ? '#1d1d1f' : '#d2d2d7')};
   cursor: pointer;
   text-align: ${(props) => (props.right ? 'right' : 'left')};
+`;
+
+export const OptionsMac = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const OptionMac = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: -1px;
+  }
+`;
+
+export const OptionMacImage = styled.img`
+  width: 167px;
+`;
+
+export const ColorsOptionsMac = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 5px;
+  width: 200px;
+`;
+
+export const ColorOptionMac = styled.div<ColorOptionMacType>`
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: ${(props) => props.background};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

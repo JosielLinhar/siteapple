@@ -15,8 +15,13 @@ import {
   BannerAreaButtons,
   BannerMacPro,
   SelectMac,
-  OptionsMac,
+  OptionsType,
   OptionType,
+  OptionsMac,
+  OptionMac,
+  OptionMacImage,
+  ColorsOptionsMac,
+  ColorOptionMac,
 } from './AppStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
@@ -39,6 +44,9 @@ import macShop from './assets/images/macShop.svg';
 import macStudio from './assets/images/macStudio.svg';
 import macbook from './assets/images/macbook.jpeg';
 import macpro from './assets/images/macpro.jpeg';
+import macBookImage from './assets/images/macBookImage.png';
+import iconMacM1 from './assets/images/icon-mac-m1.png';
+import iconMacM2 from './assets/images/icon-mac-m2.png';
 
 function App() {
   const [optionMac, setOptionMac] = useState<boolean>(true);
@@ -131,7 +139,11 @@ function App() {
             alt="macbook-air"
           />
           <TextOptionProductApple>MacBook Air</TextOptionProductApple>
-          <SpanNewOptionProductApple marginTop="76px" type="span-new-option">
+          <SpanNewOptionProductApple
+            fontSize="10px"
+            marginTop="76px"
+            type="span-new-option"
+          >
             Novo
           </SpanNewOptionProductApple>
         </ItemOptionProductApple>
@@ -143,7 +155,11 @@ function App() {
             alt="macbook-pro"
           />
           <TextOptionProductApple>MacBook Pro</TextOptionProductApple>
-          <SpanNewOptionProductApple marginTop="76px" type="span-new-option">
+          <SpanNewOptionProductApple
+            fontSize="10px"
+            marginTop="76px"
+            type="span-new-option"
+          >
             Novo
           </SpanNewOptionProductApple>
         </ItemOptionProductApple>
@@ -233,7 +249,9 @@ function App() {
       </AppleEducationBlock>
 
       <BannerArea>
-        <SpanNewOptionProductApple>Novo</SpanNewOptionProductApple>
+        <SpanNewOptionProductApple fontSize="17px">
+          Novo
+        </SpanNewOptionProductApple>
         <h1>MacBook Air</h1>
         <h2>Livre, leve e voa.</h2>
         <p>A partir de R$ 13.999</p>
@@ -265,7 +283,7 @@ function App() {
       </BannerArea>
 
       <BannerMacPro>
-        <SpanNewOptionProductApple marginTop="45px">
+        <SpanNewOptionProductApple fontSize="17px" marginTop="45px">
           Novo
         </SpanNewOptionProductApple>
         <h1>MacBook Pro de 13 pol.</h1>
@@ -301,7 +319,7 @@ function App() {
       <SelectMac>
         <h1>Qual é o Mac ideal para você?</h1>
 
-        <OptionsMac>
+        <OptionsType>
           <OptionType
             onClick={() => setOptionMac(!optionMac)}
             selected={optionMac}
@@ -320,6 +338,89 @@ function App() {
           >
             Desktop
           </OptionType>
+        </OptionsType>
+
+        <OptionsMac>
+          <OptionMac>
+            <OptionMacImage src={macBookImage} alt="mac-image" />
+
+            <ColorsOptionsMac>
+              <ColorOptionMac background="#565353"></ColorOptionMac>
+              <ColorOptionMac background="#d8d8d8"></ColorOptionMac>
+              <ColorOptionMac background="#a58236"></ColorOptionMac>
+            </ColorsOptionsMac>
+
+            <SpanNewOptionProductApple
+              fontSize="11px"
+              marginTop="24px"
+            ></SpanNewOptionProductApple>
+
+            <h1>
+              MacBook Air
+              <br />
+              <br />
+            </h1>
+          </OptionMac>
+
+          <OptionMac>
+            <OptionMacImage src={macBookImage} alt="mac-image" />
+
+            <ColorsOptionsMac>
+              <ColorOptionMac background="#565353"></ColorOptionMac>
+              <ColorOptionMac background="#d8d8d8"></ColorOptionMac>
+              <ColorOptionMac background="#a58236"></ColorOptionMac>
+              <ColorOptionMac background="#9e5058"></ColorOptionMac>
+            </ColorsOptionsMac>
+
+            <SpanNewOptionProductApple fontSize="11px" marginTop="10px">
+              Novo
+            </SpanNewOptionProductApple>
+
+            <h1>
+              MacBook Air
+              <br />
+              <br />
+            </h1>
+          </OptionMac>
+
+          <OptionMac>
+            <OptionMacImage src={macBookImage} alt="mac-image" />
+
+            <ColorsOptionsMac>
+              <ColorOptionMac background="#565353"></ColorOptionMac>
+              <ColorOptionMac background="#d8d8d8"></ColorOptionMac>
+            </ColorsOptionsMac>
+
+            <SpanNewOptionProductApple fontSize="11px" marginTop="10px">
+              Novo
+            </SpanNewOptionProductApple>
+
+            <h1>
+              MacBook Pro
+              <br />
+              de 13 pol.
+            </h1>
+          </OptionMac>
+
+          <OptionMac>
+            <OptionMacImage src={macBookImage} alt="mac-image" />
+
+            <ColorsOptionsMac>
+              <ColorOptionMac background="#565353"></ColorOptionMac>
+              <ColorOptionMac background="#d8d8d8"></ColorOptionMac>
+            </ColorsOptionsMac>
+
+            <SpanNewOptionProductApple
+              fontSize="11px"
+              marginTop="24px"
+            ></SpanNewOptionProductApple>
+
+            <h1>
+              MacBook Pro
+              <br />
+              de 14 e 16 pol.
+            </h1>
+          </OptionMac>
         </OptionsMac>
       </SelectMac>
     </div>
